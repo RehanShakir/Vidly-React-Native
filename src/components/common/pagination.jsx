@@ -2,9 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import _ from "lodash"; //Library, imported for creating array using lodash (_.range()) method
 
-const Pagination = (props) => {
-  const { itemsCount, pageSize, currentPage, onPageChange } = props;
-  console.log(currentPage);
+const Pagination = ({ itemsCount, pageSize, currentPage, onPageChange }) => {
   const pagesCount = Math.ceil(itemsCount / pageSize); //Math.celi, bulit-in function for rounding off a number
   if (pagesCount === 1)
     return <p>These are only the list of movies that are in database.</p>;
